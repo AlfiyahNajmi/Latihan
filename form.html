@@ -9,9 +9,123 @@
 </head>
 
 <body>
+    <div class="form-title">
     <h1 id="title">Customer Review</h1>
     <p id="description">Dear customer, we would like to hear your opinion about our product to improve our product quality. Therefore, please fill out this form with the required information. Thank You! </p>
-    <form id="survey-form"></form>
+    </div>
+    
+    <div class="form-question">
+    <form id="survey-form">
+        <fieldset class="identity">
+            <label id="name-label">Name: <input id="name" type="text" placeholder="Enter your name here" class="identity-answer" required></label>
+            <label id="email-label">E-mail: <input id="email" type="email" placeholder="abcdefg@gmail.com" class="identity-answer" required></label>
+            <label id="number-label">Age: <input id="number" type="number" min="10" max="120" class="identity-answer" placeholder="Enter your age here" required></label>
+        </fieldset>
+        <fieldset class="question">
+            <legend> Do you use skincare products?</legend>
+            <label for="yes-using" class="answer"><input id="yes-using" type="radio" name="skincare-use" class="inline" value="yes-using" checked> Yes</label>
+            <label for="no-using" class="answer"><input id="no-using" type="radio" name="skincare-use" class="inline" value="no-using"> No</label>
+        </fieldset>
+        <fieldset>
+            <legend> Is having good skin important to you?</legend>
+            <label for="yes-good" class="answer"><input id="yes-good" type="radio" name="good-skin" class="inline" value="yes-good" checked> Yes</label>
+            <label for="no-good" class="answer"><input id="no-good" type="radio" name="good-skin" class="inline" value="no-good" > No</label>
+        </fieldset>
+        <fieldset>
+            <legend> Which, if any, of the following statements applies to you?</legend>
+            <label for="oily" class="answer"><input id="oily" type="checkbox" name="skin-condition" class="inline" value="oily" checked> I have oily skin</label>
+            <label for="acne" class="answer"><input id="acne" type="checkbox" name="skin-condition" class="inline" value="acne"> I have acne</label>
+            <label for="pigmentation" class="answer"><input id="pigmentation" type="checkbox" class="inline" name="skin-condition" value="pigmentation"> I have pigmentation</label>
+            <label for="dry" class="answer"><input id="dry" type="checkbox" name="skin-condition" class="inline" value="dry"> I have dry and dull skin</label>
+            <label for="wrinkles" class="answer"><input id="wrinkles" type="checkbox" name="skin-condition" class="inline" value="wrinkles"> I have wrinkles</label>
+            <label for="spots" class="answer"><input id="spots" type="checkbox" name="skin-condition" class="inline" value="spots"> I have brown spots</label>
+            <label for="redness" class="answer"><input id="redness" type="checkbox" name="skin-condition" class="inline" value="redness"> I have suffered redness and sensitivity</label>
+            <label for="uneven" class="answer"><input id="uneven" type="checkbox" name="skin-condition" class="inline" value="uneven"> I have uneven skin tone</label>
+            <label for="other" class="answer"><input id="other" type="checkbox" name="skin-condition" class="inline" value="other"> Other: <input id="other" type="text" placeholder="Describe your skin condition here"> </label>
+        </fieldset>
+        <fieldset>
+            <legend> What are your current skincare products?</legend>
+            <label for="remover" class="answer"><input id="remover" type="checkbox" name="skincare-product" class="inline" value="remover" checked> Makeup remover</label>
+            <label for="cleansing" class="answer"><input id="cleansing" type="checkbox" name="skincare-product" class="inline" value="cleansing" > Cleansing</label>
+            <label for="anti-aging" class="answer"><input id="anti-aging" type="checkbox" name="skincare-product" class="inline" value="anti-aging" > Anti-aging cream</label>
+            <label for="eye-cream" class="answer"><input id="eye-cream" type="checkbox" name="skincare-product" class="inline" value="eye-cream" > Eye cream</label>
+            <label for="moisturizer" class="answer"><input id="moisturizer" type="checkbox" name="skincare-product" class="inline" value="moisturizer" > Moisturizer</label>
+            <label for="toner" class="answer"><input id="toner" type="checkbox" name="skincare-product" class="inline" value="toner" > Toner</label>
+            <label for="lotion" class="answer"><input id="lotion" type="checkbox" name="skincare-product" class="inline" value="lotion" > Lotion</label>
+            <label for="cleanser" class="answer"><input id="cleanser" type="checkbox" name="skincare-product" class="inline" value="cleanser" > Cleanser</label>
+            <label for="serum" class="answer"><input id="serum" type="checkbox" name="skincare-product" class="inline" value="serum" > Serum</label>
+            <label for="other-product" class="answer"><input id="other-product" type="checkbox" name="skincare-product" class="inline" value="other-product" > Other: <input id="other-product" type="text" placeholder="Describe your current skincare products"> </label>
+        </fieldset>
+        <fieldset>
+            <legend> How frequently do you purchase skincare products?</legend>
+            <label for="often" class="answer"><input id="often" type="radio" name="purchased-period" class="inline" value="often" checked> Often</label>
+            <label for="sometimes" class="answer"><input id="sometimes" type="radio" name="purchased-period" class="inline" value="sometimes" > Sometimes</label>
+            <label for="rarely" class="answer"><input id="rarely" type="radio" name="purchased-period" class="inline" value="rarely" > Rarely</label>
+            <label for="never" class="answer"><input id="never" type="radio" name="purchased-period" class="inline" value="never" > Never</label>
+        </fieldset>
+        <fieldset>
+            <legend> How much do you spend on skincare products on average per month?</legend>
+            <label for="less" class="answer"><input id="less" type="radio" name="purchased-budget" class="inline" value="less" checked> Less than $100</label>
+            <label for="between" class="answer"><input id="between" type="radio" name="purchased-budget" class="inline" value="between" > $100-$250</label>
+            <label for="more" class="answer"><input id="more" type="radio" name="purchased-budget" class="inline" value="more" > More than $250</label>
+        </fieldset>
+        <fieldset>
+            <legend> Where do you buy our skincare products?</legend>
+            <label for="purchased-platform">
+                <select id="dropdown" name="purchased-platform">
+                    <option value=""> (Select one)</option>
+                    <option value="1"> Official Website</option>
+                    <option value="2"> Offline Store</option>
+                    <option value="3"> Catalogues</option>
+                    <option value="4"> E-Commerce</option>
+                </select> 
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend> Would you suggest our product to your friends?</legend>
+            <label for="yes-suggest" class="answer"><input id="yes-suggest" type="radio" name="product-suggest" class="inline" value="yes-suggest" checked> Yes</label>
+            <label for="no-suggest" class="answer"><input id="no-suggest" type="radio" name="product-suggest" class="inline" value="no-suggest"> No</label>
+            <label for="maybe-suggest" class="answer"><input id="maybe-suggest" type="radio" name="product-suggest" class="inline" value="maybe-suggest"> Maybe</label>
+        </fieldset>
+        <fieldset>
+            <legend> Would you repurchase in the near future?</legend>
+            <label for="yes-repurchase" class="answer"><input id="yes-repurchase" type="radio" name="repurchase" class="inline" value="yes-repurchase" checked> Yes</label>
+            <label for="no-repurchase" class="answer"><input id="no-repurchase" type="radio" name="repurchase" class="inline" value="no-repurchase"> No</label>
+            <label for="maybe-repurchase" class="answer"><input id="maybe-repurchase" type="radio" name="repurchase" class="inline" value="maybe-repurchase"> Maybe</label>
+        </fieldset>
+        <fieldset>
+            <legend> Our products were reasonably priced.</legend>
+            <label for="yes-reasonably" class="answer"><input id="yes-reasonably" type="radio" name="product-priced" class="inline" value="yes-reasonably" checked> Yes</label>
+            <label for="no-reasonably" class="answer"><input id="no-reasonably" type="radio" name="product-priced" class="inline" value="no-reasonably"> No</label>
+            <label for="maybe-reasonably" class="answer"><input id="maybe-reasonably" type="radio" name="product-priced" class="inline" value="maybe-reasonably"> Maybe</label>
+        </fieldset>
+        <fieldset>
+            <legend> Our products exceed your expectations.</legend>
+            <label for="yes-exceed" class="answer"><input id="yes-exceed" type="radio" name="product-expectation" class="inline" value="yes-exceed" checked> Yes</label>
+            <label for="no-exceed" class="answer"><input id="no-exceed" type="radio" name="product-expectation" class="inline" value="no-exceed"> No</label>
+            <label for="maybe-exceed" class="answer"><input id="maybe-exceed" type="radio" name="product-expectation" class="inline" value="maybe-exceed"> Maybe</label>
+        </fieldset>
+        <fieldset>
+            <legend> Our products were appropriate for your skin condition.</legend>
+            <label for="yes-appropriate" class="answer"><input id="yes-appropriate" type="radio" name="product-appropriate" class="inline" value="yes-appropriate" checked> Yes</label>
+            <label for="no-appropriate" class="answer"><input id="no-appropriate" type="radio" name="product-appropriate" class="inline" value="no-appropriate"> No</label>
+            <label for="maybe-appropriate" class="answer"><input id="maybe-appropriate" type="radio" name="product-appropriate" class="inline" value="maybe-appropriate"> Maybe</label>
+        </fieldset>
+        <fieldset>
+            <legend> The packaging is clean and luxurious.</legend>
+            <label for="yes-packaging" class="answer"><input id="yes-packaging" type="radio" name="packaging" class="inline" value="yes-packaging" checked> Yes</label>
+            <label for="no-packaging" class="answer"><input id="no-packaging" type="radio" name="packaging" class="inline" value="no-packaging"> No</label>
+            <label for="maybe-packaging" class="answer"><input id="maybe-packaging" type="radio" name="packaging" class="inline" value="maybe-packaging"> Maybe</label>
+        </fieldset>
+        <fieldset class="textarea">
+            <label for="comment"> What did you enjoy about our product?<textarea id="comment" rows="5" cols="40" placeholder="Enter your comment here..."></textarea></label>
+        </fieldset>
+        <fieldset class="textarea">
+            <label for="feedback"> Give us feedback<textarea id="feedback" rows="5" cols="40" placeholder="Write your feedback here..."></textarea></label>
+        </fieldset>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+    </div>
 </body>
 
 </html>
